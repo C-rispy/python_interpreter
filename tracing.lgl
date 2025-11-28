@@ -1,0 +1,15 @@
+["seq",
+  ["set", "add_two", 
+    ["func", ["x"], ["addieren", "x", 2]]],
+  ["set", "add_three", 
+    ["func", ["x"], ["addieren", ["call", "add_two", "x"], 3]]],
+
+  ["set", "a", 5],
+  ["set", "b", 10],
+
+  ["set", "a_plus_two", ["call", "add_two", "a"]],
+  ["set", "b_plus_three", ["call", "add_three", "b"]],
+
+  ["print", ["get", "a_plus_two"]],
+  ["print", ["get", "b_plus_three"]]
+]
